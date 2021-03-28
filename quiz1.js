@@ -1,12 +1,16 @@
 function change() {
-    var header = document.getElementById("cgu");
-    header.innerHTML = "CSIE@CGU";
-    var para = document.getElementById("bump");
-    para.innerHTML = "或ê或次!!";
+    /*  var header = document.getElementById("cgu");
+    header.innerHTML = "CSIE@CGU";*/
+    $("#cgu").html("CSIE@CGU");
+    $("#bump").html("或ê或次!!");
 }
 function newbutton() {
-    var btn = document.createElement("BUTTON");
-    btn.innerHTML = "CLICKME";
+    /*var btn = document.createElement("BUTTON");
+    btn.innerHTML = "CLICK?@ME";
     document.body.appendChild(btn);
-    btn.addEventListener('click', change);
+    btn.addEventListener('click', change);*/
+    var btnn="<button id='change'>CLICK ME </button>";
+    $("body").append(btnn);
+    $("#change").click(change);
 }
+$("#btn").click(newbutton);
