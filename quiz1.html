@@ -3,10 +3,37 @@
     <title>My Document</title> 
       <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
     </head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script> 
+        window.dataLayer = window.dataLayer || []; 
+        function gtag(){
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date()); 
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
   <body>
     <input type="button" value="Change this document" id="btn">
     <h1 id="cgu">CGU</h1>
     <p id="bump">次次</p>
-    <script  src="quiz1.js"></script>
+    <script>
+    function change() {
+      /*  var header = document.getElementById("cgu");
+      header.innerHTML = "CSIE@CGU";*/
+      $("#cgu").html("CSIE@CGU");
+      $("#bump").html("或ê或次!!");
+  }
+  function newbutton() {
+      /*var btn = document.createElement("BUTTON");
+      btn.innerHTML = "CLICK?@ME";
+      document.body.appendChild(btn);
+      btn.addEventListener('click', change);*/
+      var btnn="<button id='change'>CLICK ME </button>";
+      $("body").append(btnn);
+      $("#change").click(change);
+  }
+  $("#btn").click(newbutton);
+  </Script>
     </body>
 </html>
